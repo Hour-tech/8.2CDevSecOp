@@ -46,7 +46,7 @@ pipeline {
                 sh '''
                 //your scripts
                 '''
-            }
+            
     }
 
     post {
