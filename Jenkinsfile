@@ -41,6 +41,7 @@ pipeline {
                 sh 'npm audit || true'
             }
         }
+
         stage('SonarCloud Analysis') {
             steps {
                 sh '''
@@ -54,8 +55,7 @@ pipeline {
                 sonar.projectName=NodeJS Goof Vulnerable App
                 sonar.sourceEncoding=UTF-8
                 '''
-            } 
-
+            }
         }
     }
 
@@ -66,4 +66,5 @@ pipeline {
             sh 'npm -v'
         }
     }
-}
+} 
+
