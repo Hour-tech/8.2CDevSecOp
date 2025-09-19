@@ -55,6 +55,8 @@ pipeline {
                 sonar.sourceEncoding=UTF-8
                 '''
             } 
+
+        }
     }
 
     post {
