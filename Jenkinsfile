@@ -44,9 +44,17 @@ pipeline {
         stage('SonarCloud Analysis') {
             steps {
                 sh '''
-                //your scripts
+                sonar.projectKey=Hour-tech_8.2CDevSecOp
+                sonar.organization=hour-tech
+                sonar.host.url=https://sonarcloud.io
+                sonar.login=${SONAR_TOKEN2}
+                sonar.sources=.
+                sonar.exclusions=node_modules/**,test/**
+                sonar.javascript.lcov.reportPaths=coverage/lcov.info
+                sonar.projectName=NodeJS Goof Vulnerable App
+                sonar.sourceEncoding=UTF-8
                 '''
-            
+            } 
     }
 
     post {
